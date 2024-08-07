@@ -89,11 +89,12 @@ def DrawInputsWidgets():
     df = load_telco_data()
     percentageMin, percentageMax = 0.4, 2.0
 
-# we create input widgets only for 6 features
+    # we create input widgets only for 6 features
     col1, col2, col3, col4 = st.beta_columns(4)
     col5, col6, col7, col8 = st.beta_columns(4)
 
     # We are using these features to feed the ML pipeline - values copied from check_variables_for_UI() result
+    # {'PaymentMethod', 'MonthlyCharges', 'PhoneService', 'Contract', 'OnlineBackup', 'InternetService'}
 
     # create an empty DataFrame, which will be the live data
     X_live = pd.DataFrame([], index=[0])
